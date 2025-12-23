@@ -1,2 +1,2 @@
 # wedding-invitation
-hẹ hẹ
+wedding-invitation

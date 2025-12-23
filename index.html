@@ -877,6 +877,36 @@
             border: 1px dashed #ccc;
         }
 
+        .qr-tabs{
+            display:flex;
+            gap:10px;
+            margin:15px 0;
+        }
+
+        .qr-tab{
+            flex:1;
+            text-align:center;
+            padding:8px;
+            border-radius:20px;
+            border:1px solid var(--primary-color);
+            cursor:pointer;
+            font-weight:bold;
+            color:var(--primary-color);
+        }
+
+        .qr-tab.active{
+            background:var(--primary-color);
+            color:#fff;
+        }
+
+        .qr-content{
+            display:none;
+        }
+
+        .qr-content.active{
+            display:block;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -1149,10 +1179,9 @@
                         Nội
                     </p>
                     <div class="map-preview" style="margin-bottom: 20px;">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4425.3710785898875!2d105.88370627583626!3d20.762181396880127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135b7006d331c93%3A0xdfd55d6ae29c644c!2zU-G7sSBraeG7h24gSMOibiBo4bqxbmc!5e1!3m2!1sen!2s!4v1765596685653!5m2!1sen!2s"
-                            width="380" height="280" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4442.953420505236!2d106.14730027582506!3d20.15317081727411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136734aec8bfa01%3A0x2cf8b1dd5f7ab9c2!2zTmjDoCBtYXkgTmfhu41jIFRow6BuaA!5e1!3m2!1svi!2s!4v1766480806848!5m2!1svi!2s"
+                                width="380" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
                     <h3 class="">Nhà Gái</h3>
@@ -1162,12 +1191,12 @@
                         <p style="color: #666; font-size: 0.9rem; margin-top: 5px; margin-bottom: 20px;">Số 73 Đình
                             Thượng, Nội Thôn, Hồng Vân, TP Hài Nội
                         </p>
-                        <!-- <div class="map-preview">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4425.3710785898875!2d105.88370627583626!3d20.762181396880127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135b7006d331c93%3A0xdfd55d6ae29c644c!2zU-G7sSBraeG7h24gSMOibiBo4bqxbmc!5e1!3m2!1sen!2s!4v1765596685653!5m2!1sen!2s"
+                    <div class="map-preview">
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.9134349241333!2d106.05118860538927!3d20.503007964179204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135db4c456382b1%3A0xaaf13e932d6376e1!2zVHLGsOG7nW5nIFRIIHjDoyBC4buRaSBD4bqndQ!5e1!3m2!1svi!2s!4v1766475174130!5m2!1svi!2s"
                                 width="380" height="280" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div> -->
+                    </div>
             </div>
 
             <div class="content-block scroll-element scroll-up" style="background: #fafafa;">
@@ -1219,22 +1248,51 @@
             <div class="modal-overlay" id="bankModal">
                 <div class="bank-info-box">
                     <span class="close-modal" onclick="toggleModal(false)">&times;</span>
+
                     <h3 class="section-title" style="font-size:1.5rem">Hộp Mừng Cưới</h3>
                     <p style="margin-top:10px; color:#666">Cảm ơn tình cảm của bạn!</p>
 
-                    <div class="bank-qr">
-                        <img src="https://namngoc231.github.io/Demo/assets/qr.png" alt="QR Code"
-                            style="width:100%; height:100%; object-fit:contain;">
+                    <!-- TAB CHỌN -->
+                    <div class="qr-tabs">
+                        <div class="qr-tab active" onclick="switchQR('groom')">Nhà Trai</div>
+                        <div class="qr-tab" onclick="switchQR('bride')">Nhà Gái</div>
                     </div>
 
-                    <a href="https://namngoc231.github.io/Demo/assets/qr.png"
-                        download="QR_Mung_Cuoi_Phong_Quynh" class="download-btn">
-                        <i class="fa-solid fa-download"></i> Tải Mã QR
-                    </a>
+                    <!-- QR NHÀ TRAI -->
+                    <div class="qr-content active" id="qr-groom">
+                        <div class="bank-qr">
+                            <img src="https://namngoc231.github.io/Demo/assets/qr.png"
+                                 style="width:100%; height:100%; object-fit:contain;">
+                        </div>
 
-                    <p style="font-weight:bold; color:var(--primary-color)">Ngân hàng TPBANK</p>
-                    <p>STK: 5221 812 1999</p>
-                    <p>Chủ TK: VU QUOC PHONG</p>
+                        <a href="https://namngoc231.github.io/Demo/assets/qr.png"
+                           download="QR_Nha_Trai"
+                           class="download-btn">
+                            <i class="fa-solid fa-download"></i> Tải QR Nhà Trai
+                        </a>
+
+                        <p style="font-weight:bold; color:var(--primary-color)">Ngân hàng TPBANK</p>
+                        <p>STK: 5221 812 1999</p>
+                        <p>Chủ TK: VU QUOC PHONG</p>
+                    </div>
+
+                    <!-- QR NHÀ GÁI -->
+                    <div class="qr-content" id="qr-bride">
+                        <div class="bank-qr">
+                            <img src="https://namngoc231.github.io/Demo/assets/qr.png"
+                                 style="width:100%; height:100%; object-fit:contain;">
+                        </div>
+
+                        <a href="https://namngoc231.github.io/Demo/assets/qr.png"
+                           download="QR_Nha_Gai"
+                           class="download-btn">
+                            <i class="fa-solid fa-download"></i> Tải QR Nhà Gái
+                        </a>
+
+                        <p style="font-weight:bold; color:var(--primary-color)">Ngân hàng MB BANK</p>
+                        <p>STK: 1234 567 888</p>
+                        <p>Chủ TK: BUI DIEM QUYNH</p>
+                    </div>
                 </div>
             </div>
             <div class="content-block">
@@ -1358,6 +1416,20 @@
                 });
             }, { threshold: 0.15 });
             document.querySelectorAll('.scroll-element').forEach((el) => { observer.observe(el); });
+        }
+
+        /* --- JS CHO PHẦN QR --- */
+        function switchQR(type) {
+            document.querySelectorAll('.qr-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.qr-content').forEach(c => c.classList.remove('active'));
+
+            if (type === 'groom') {
+                document.querySelector('.qr-tab:nth-child(1)').classList.add('active');
+                document.getElementById('qr-groom').classList.add('active');
+            } else {
+                document.querySelector('.qr-tab:nth-child(2)').classList.add('active');
+                document.getElementById('qr-bride').classList.add('active');
+            }
         }
 
         /* --- JS CHO PHẦN ALBUM ẢNH --- */
