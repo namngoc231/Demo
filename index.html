@@ -1649,9 +1649,9 @@
             // 1. Lấy toàn bộ tham số trên thanh địa chỉ
             const urlParams = new URLSearchParams(window.location.search);
 
-            // 2. Tìm tham số có tên là "k" (viết tắt của Khách) hoặc "guest"
-            // Ví dụ link: thiepcuoi.com?k=Anh%20Nam
-            const guestName = urlParams.get('k') || urlParams.get('guest');
+            // 2. Tìm tham số có tên là "khachmoi" hoặc "guest"
+            // Ví dụ link: thiepcuoi.com?khachmoi=Anh%20Nam
+            const guestName = urlParams.get('khachmoi') || urlParams.get('guest');
 
             // 3. Nếu tìm thấy tên thì thay thế vào
             if (guestName) {

@@ -151,7 +151,7 @@
 
         <div class="group">
             <label>Link trang web gốc:</label>
-            <input type="text" id="baseUrl" value="https://phongquynhwedding.vercel.app/" readonly
+            <input type="text" id="baseUrl" value="https://ngochangwedding.vercel.app/" readonly
                 style="background:#eee; color:#555">
         </div>
 
@@ -208,8 +208,8 @@
 
             // Encode tên để xử lý tiếng Việt và ký tự đặc biệt
             const encodedName = encodeURIComponent(name);
-            // Tạo link chuẩn: thêm tham số ?k=
-            const fullLink = `${baseUrl}?k=${encodedName}`;
+            // Tạo link chuẩn: thêm tham số ?khachmoi=
+            const fullLink = `${baseUrl}?khachmoi=${encodedName}`;
 
             const linkEl = document.getElementById('finalLink');
             const resultBox = document.getElementById('singleResult');
@@ -235,7 +235,7 @@
                 name = name.trim();
                 if (name) {
                     const encodedName = encodeURIComponent(name);
-                    const fullLink = `${baseUrl}?k=${encodedName}`;
+                    const fullLink = `${baseUrl}?khachmoi=${encodedName}`;
 
                     // Tạo HTML hiển thị
                     const div = document.createElement('div');
