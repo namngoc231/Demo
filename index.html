@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiệp Cưới: Nam Ngọc & Nhật Hằng</title>
+    <title>Ngọc💗Hằng</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://namngoc231.github.io/Demo/">
     <meta property="og:title" content="Thiệp cưới — Nam Ngọc & Nhật Hằng">
@@ -1079,6 +1080,128 @@
         .gallery-item.tall {
             grid-row: span 2;
         }
+
+        /* --- ĐẾM NGƯỢC --- */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            padding: 12px 14px;
+            min-width: 70px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .countdown-title {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .countdown-title h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .countdown-title h3 span {
+            display: block;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-top: 4px;
+        }
+
+        /* --- TIMELINE --- */
+        .time-box span {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #d6336c;
+        }
+
+        .time-box small {
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        .timeline-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 15px 0 25px;
+        }
+
+        .timeline-tab {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            background: #fff;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-tab.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .timeline-box {
+            max-width: 300px;
+            margin: 0 auto;
+            display: none;
+            animation: fadeUp 0.4s ease;
+        }
+
+        .timeline-box.active {
+            display: block;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .t-time {
+            font-weight: bold;
+            color: var(--primary-color);
+            min-width: 55px;
+        }
+
+        .t-content h4 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .t-content p {
+            margin: 3px 0 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 
@@ -1146,6 +1269,31 @@
             </div>
 
             <div class="content-block scroll-element scroll-up" style="background: #fafafa;">
+                <div class="countdown-title">
+                    <h3>
+                        Ngày Chúng Ta Gọi Là Mãi Mãi<br>
+                        <span>Cùng Đếm Ngược</span>
+                    </h3>
+                </div>
+                <div id="wedding-countdown" class="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Ngày</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Giờ</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Phút</small>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Giây</small>
+                    </div>
+                </div>
+                <div style=" margin-bottom: 20px;"></div>
                 <h2 class="section-title">Tháng 03 - 2026</h2>
                 <div class="calendar-box">
                     <div class="calendar-grid" style="font-weight: bold; color: #333; margin-bottom: 15px;">
@@ -1163,34 +1311,21 @@
                 <p style="color: #777; margin-top: 5px;">Vào lúc 16:30 PM</p>
             </div>
 
-            <div class="content-block scroll-element scroll-up">
-                <h2 class="section-title">Địa Điểm</h2>
-                <h3 class="">Nhà Trai</h3>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 5px; margin-bottom: 20px;">
-                        Xã Khánh Trung, Ninh Bình
-                    </p>
-                    <div class="map-preview" style="margin-bottom: 20px;">
-                        <iframe title="Bản đồ địa điểm tổ chức lễ cưới Nhà Trai"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4442.953420505236!2d106.14730027582506!3d20.15317081727411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136734aec8bfa01%3A0x2cf8b1dd5f7ab9c2!2zTmjDoCBtYXkgTmfhu41jIFRow6BuaA!5e1!3m2!1svi!2s!4v1766480806848!5m2!1svi!2s"
-                                width="320" height="280" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-
-                    <h3 class="">Nhà Gái</h3>
-                        <p style="color: #666; font-size: 0.9rem; margin-top: 5px; margin-bottom: 20px;">
-                            Xã Bình An, Ninh Bình
-                        </p>
-                    <div class="map-preview">
-                        <iframe title="Bản đồ địa điểm tổ chức lễ cưới Nhà Gái"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.9134349241333!2d106.05118860538927!3d20.503007964179204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135db4c456382b1%3A0xaaf13e932d6376e1!2zVHLGsOG7nW5nIFRIIHjDoyBC4buRaSBD4bqndQ!5e1!3m2!1svi!2s!4v1766475174130!5m2!1svi!2s"
-                                width="320" height="280" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-            </div>
-
-            <div class="content-block scroll-element scroll-up" style="background: #fafafa;">
+            <div class="content-block scroll-element scroll-up" style="background:#fafafa;">
                 <h2 class="section-title">Lịch Trình</h2>
-                <div style="max-width: 300px; margin: 0 auto;">
+
+                <!-- Tabs -->
+                <div class="timeline-tabs">
+                    <button class="timeline-tab active" onclick="switchTimeline('groom')" aria-pressed="true">
+                        Nhà Trai
+                    </button>
+                    <button class="timeline-tab" onclick="switchTimeline('bride')" aria-pressed="false">
+                        Nhà Gái
+                    </button>
+                </div>
+
+                <!-- Timeline Nhà Trai -->
+                <div class="timeline-box active" id="timeline-groom">
                     <div class="timeline-item">
                         <div class="t-time">15:30</div>
                         <div class="t-content">
@@ -1198,6 +1333,7 @@
                             <p>Chụp hình check-in</p>
                         </div>
                     </div>
+
                     <div class="timeline-item">
                         <div class="t-time">16:30</div>
                         <div class="t-content">
@@ -1205,11 +1341,39 @@
                             <p>Làm lễ và dùng tiệc</p>
                         </div>
                     </div>
+
                     <div class="timeline-item">
                         <div class="t-time">20:00</div>
                         <div class="t-content">
                             <h4>Party</h4>
                             <p>Giao lưu âm nhạc</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Nhà Gái -->
+                <div class="timeline-box" id="timeline-bride">
+                    <div class="timeline-item">
+                        <div class="t-time">08:00</div>
+                        <div class="t-content">
+                            <h4>Đón Khách</h4>
+                            <p>Tiếp đón tại tư gia</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="t-time">09:00</div>
+                        <div class="t-content">
+                            <h4>Lễ Vu Quy</h4>
+                            <p>Nghi thức truyền thống</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="t-time">10:30</div>
+                        <div class="t-content">
+                            <h4>Tiễn Đoàn</h4>
+                            <p>Nhà trai đón dâu</p>
                         </div>
                     </div>
                 </div>
@@ -1339,6 +1503,32 @@
                     </div>
                 </div>
             </div>
+
+            <div class="content-block scroll-element scroll-up">
+                <h2 class="section-title">Địa Điểm</h2>
+                <h3 class="">Nhà Trai</h3>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 5px; margin-bottom: 20px;">
+                    Xã Khánh Trung, Ninh Bình
+                </p>
+                <div class="map-preview" style="margin-bottom: 20px;">
+                    <iframe title="Bản đồ địa điểm tổ chức lễ cưới Nhà Trai"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4442.953420505236!2d106.14730027582506!3d20.15317081727411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136734aec8bfa01%3A0x2cf8b1dd5f7ab9c2!2zTmjDoCBtYXkgTmfhu41jIFRow6BuaA!5e1!3m2!1svi!2s!4v1766480806848!5m2!1svi!2s"
+                            width="320" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <h3 class="">Nhà Gái</h3>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 5px; margin-bottom: 20px;">
+                    Xã Bình An, Ninh Bình
+                </p>
+                <div class="map-preview">
+                    <iframe title="Bản đồ địa điểm tổ chức lễ cưới Nhà Gái"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1317.9134349241333!2d106.05118860538927!3d20.503007964179204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135db4c456382b1%3A0xaaf13e932d6376e1!2zVHLGsOG7nW5nIFRIIHjDoyBC4buRaSBD4bqndQ!5e1!3m2!1svi!2s!4v1766475174130!5m2!1svi!2s"
+                            width="320" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
             <div class="content-block">
 
                 <div class="names-container">
@@ -1669,6 +1859,55 @@
             createCalendar(2026, 3, 28);
             setTimeout(autoOpenEnvelope, 1500);
         };
+
+        // 🕊️ NGÀY GIỜ CƯỚI (SỬA Ở ĐÂY)
+        // Format: new Date("YYYY-MM-DDTHH:MM:SS")
+        const weddingDate = new Date("2026-03-28T00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById("wedding-countdown").innerHTML =
+                    "<p style='color:#d6336c;font-size:1.1rem;'>💍 Hôn lễ đã diễn ra 💍</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, "0");
+            document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        function switchTimeline(type) {
+            document.querySelectorAll('.timeline-tab').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
+
+            document.querySelectorAll('.timeline-box').forEach(box => {
+                box.classList.remove('active');
+            });
+
+            if (type === 'groom') {
+                document.querySelector('.timeline-tab:nth-child(1)').classList.add('active');
+                document.querySelector('.timeline-tab:nth-child(1)').setAttribute('aria-pressed', 'true');
+                document.getElementById('timeline-groom').classList.add('active');
+            } else {
+                document.querySelector('.timeline-tab:nth-child(2)').classList.add('active');
+                document.querySelector('.timeline-tab:nth-child(2)').setAttribute('aria-pressed', 'true');
+                document.getElementById('timeline-bride').classList.add('active');
+            }
+        }
 
     </script>
 </body>
